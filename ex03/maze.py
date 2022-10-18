@@ -21,7 +21,7 @@ def main_proc():
         mx -= 1
     if key == "Right":
         mx += 1
-    
+
     if maze_lst[my][mx] == 0:
         cx, cy = mx*100+50, my*100+50
     else:
