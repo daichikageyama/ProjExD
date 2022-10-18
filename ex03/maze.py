@@ -12,8 +12,7 @@ def key_up(event):
     key = ""
     
 def main_proc():
-    global mx, my
-    global cx, cy
+    global mx, my, cx, cy
     if key == "Up":
         my -= 1
     if key == "Down":
@@ -23,8 +22,6 @@ def main_proc():
     if key == "Right":
         mx += 1
     
-
-
     if maze_lst[my][mx] == 0:
         cx, cy = mx*100+50, my*100+50
     else:
@@ -36,10 +33,7 @@ def main_proc():
             mx += 1
         if key == "Right":
             mx -= 1
-        
-        
-        
-        
+          
     canv.coords("tori", cx, cy)
     root.after(100, main_proc)
     
@@ -47,10 +41,6 @@ def click_close():
     if messagebox.askokcancel("確認", "本当に閉じていいですか？"):
         root.destroy()
     
-    
-
-
- 
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("10秒迷路")
